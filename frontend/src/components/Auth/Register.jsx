@@ -73,7 +73,7 @@ const Register = () => {
               <div>
                 <input
                   type="text"
-                  placeholder="Zeeshan"
+                  placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
