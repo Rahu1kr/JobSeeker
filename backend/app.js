@@ -8,13 +8,14 @@ import jobRouter from "./routes/jobRouter.js";
 import applicationRouter from "./routes/applicationRouter.js";
 import {dbConnection} from "./database/dbConnection.js"
 import { errorMiddleware } from "./middlewares/error.js"
+import { config } from "./config/config.js";
 
 const app = express();
 dotenv.config({path: "./config/config.env"});
 
 app.use(cors({
     
-    origin: [process.env.FRONTEND_URL],
+    origin: [config.frontendUrl],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
 }));
